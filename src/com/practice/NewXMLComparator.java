@@ -130,7 +130,7 @@ public class NewXMLComparator {
 				.whenElementIsNamed("TPA_Ext_Restaurant").thenUse(ElementSelectors.byNameAndAttributes("ID"))
 				.whenElementIsNamed("TPA_Green_Program").thenUse(ElementSelectors.byNameAndAttributes("Code","Name"))
 				.whenElementIsNamed("TPA_Green_Measure").thenUse(ElementSelectors.byNameAndAttributes("Name"))
-				.whenElementIsNamed("TPA_Ext_Oversold").thenUse(ElementSelectors.byNameAndAttributes("NonMarriottReferralsHotelName"))
+				.whenElementIsNamed("TPA_Ext_Oversold").thenUse(ElementSelectors.byNameAndAttributes("NonReferralsHotelName"))
 				.whenElementIsNamed("TPA_Ext_TierType").thenUse(ElementSelectors.byNameAndAttributes("ID"))
 				.whenElementIsNamed("TPA_Ext_Seasonal_Award").thenUse(ElementSelectors.byNameAndAttributes("RecordID"))
 				.whenElementIsNamed("TPA_Ext_Featured_Amenity").thenUse(ElementSelectors.byNameAndAttributes("ID"))
@@ -150,7 +150,7 @@ public class NewXMLComparator {
 				.whenElementIsNamed("GDS_Code").thenUse(ElementSelectors.byNameAndAttributes("GDS_PropertyCode"))
 				.elseUse(ElementSelectors.byName)
 				.build();
-		Path filePath = Paths.get(URI.create("file:///C:/Marriott/Catalog/testing/files/xmlCompare/MasterFeedSimilar.txt"));
+		Path filePath = Paths.get(URI.create("file:///C:/Catalog/testing/files/xmlCompare/MasterFeedSimilar.txt"));
 		if (Files.exists(filePath)) {
     		Files.delete(filePath);
     		Files.createFile(filePath);
